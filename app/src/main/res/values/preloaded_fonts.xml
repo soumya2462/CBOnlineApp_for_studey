@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="doubt_options">
+        <item></item>
+        <item>Mark as Resolved</item>
+        <item>Mark as Triage</item>
+        <item>Mark as Mentor Attention Required</item>
+        <item>Mark as Ignored</item>
+    </array>
+</resources>

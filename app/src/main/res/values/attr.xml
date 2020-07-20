@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="trimLength" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="GradientTextView">
+        <attr name="startColor" format="reference|color" />
+        <attr name="endColor" format="reference|color" />
+
+    </declare-styleable>
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        style="@style/ToolBarStyleDark"
+        android:gravity="center_vertical"
+        app:title="@string/title_activity_settings" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:fontFamily="@font/gilroy_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Video download options" />
+
+        <Switch
+            android:id="@+id/wifiSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ripple"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="Download via Wi-Fi only"
+            android:textSize="18sp"
+            app:theme="@style/ColorSwitchStyle" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#eeeeee" />
+
+        <Switch
+            android:id="@+id/pipSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="Allow Picture in Picture Mode"
+            android:textSize="18sp"
+            app:theme="@style/ColorSwitchStyle"></Switch>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#eeeeee" />
+
+        <TextView
+            android:id="@+id/deleteAllTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="Delete all downloads"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="#eeeeee" />
+
+        <TextView
+            android:fontFamily="@font/gilroy_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Available Storage" />
+
+        <ProgressBar
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/salmon"
+            android:scaleY="1.5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/salmon" />
+
+            <TextView
+                android:id="@+id/spaceUsedTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/spaceFreeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/battleship_gray" />
+
+        </LinearLayout>
+
+        <TextView
+            android:fontFamily="@font/gilroy_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Set Downloading Limit" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/seekbarTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:fontFamily="@font/gilroy_bold"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:textSize="23sp" />
+
+            <SeekBar
+                android:id="@+id/seekbarLimit"
+                android:layout_width="0dp"
+                android:max="900"
+                android:progressDrawable="@drawable/seekbar_track"
+                android:thumb="@drawable/seekbar_thumb"
+                android:progress="1"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
